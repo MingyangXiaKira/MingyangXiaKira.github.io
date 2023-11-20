@@ -1,18 +1,34 @@
 import "./app.scss";
-import Jumbo from "./components/Jumbo/Jumbo";
+import Contact from "./components/Contact/Contact";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Parallax from "./components/Parallax/Parallax";
+import Portfolio from "./components/Portfolio/portfolio";
+import Section from "./components/Section/Section";
+import Works from "./components/Works/works";
 const App = () => {
   return (
     <div>
       <section>
-        <Jumbo />
+        <Navbar />
+        <Hero />
+        <Section />
       </section>
-      <section>Parallax</section>
-      <section>Project1</section>
-      <section>Project2</section>
-      <section>Project3</section>
-      <section>Parallax</section>
-      <section>Doing</section>
-      <section>Contact</section>
+      <section>
+        <Parallax type="services" />
+        <Section />
+      </section>
+      <Portfolio />
+      <section>
+        <Parallax type="others" />
+        <Section />
+      </section>
+      <Works />
+
+      <section>
+        <Contact />
+        <Section />
+      </section>
     </div>
   );
 };
