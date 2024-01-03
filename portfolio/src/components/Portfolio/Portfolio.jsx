@@ -5,21 +5,17 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "./public/ecommercee.jpeg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "MERN E-Commerce Web",
+    href: "https://mern-booking-n2kh-1lu2.onrender.com/",
+    img: "./ecommercee.jpeg",
+    desc: "Designed and developed a full-stack e-commerce application using the MERN stack, featuring a responsive UI with Tailwind CSS, RESTful API services, Stripe integration for secure payments, and enhanced security through JWT and middleware authentication.",
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "./public/blog.jpeg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
-  {
-    id: 4,
-    title: "Interactive visualization",
-    img: "./public/datavisual.jpeg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Javascript workshop",
+    img: "./jsts.jpeg",
+    href: "https://mingyangxiakira.github.io/js-workshop/",
+    desc: "An interactive JavaScript workshop featuring a collection of mini-components built using React and TypeScript, showcasing modern web development techniques and interactive functionality.",
   },
 ];
 
@@ -42,7 +38,10 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2 style={{ color: "white" }}>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+
+            <a href={item.href}>
+              <button>See Demo</button>
+            </a>
           </motion.div>
         </div>
       </div>

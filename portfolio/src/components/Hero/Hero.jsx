@@ -37,7 +37,10 @@ const sliderVariants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ refs }) => {
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="hero">
       <div className="wrapper">
@@ -49,13 +52,21 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>Mingyang Xia</motion.h2>
           <motion.h1 variants={textVariants}>
-            Full-stack developer and Deep learning Practitioner
+            Full-stack web developer and Deep Learning skills learner
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToSection(refs.worksRef)}
+            >
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToSection(refs.contactRef)}
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}

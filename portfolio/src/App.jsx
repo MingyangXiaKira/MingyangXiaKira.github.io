@@ -5,17 +5,27 @@ import Navbar from "./components/Navbar/Navbar";
 import Parallax from "./components/Parallax/Parallax";
 import Portfolio from "./components/Portfolio/portfolio";
 import Section from "./components/Section/Section";
-import Works from "./components/Works/works";
+import Works from "./components/Works/Works";
+import React, { useRef } from "react";
+
 const App = () => {
+  const heroRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const worksRef = useRef(null);
+  const contactRef = useRef(null);
+  const refs = {
+    contactRef: contactRef,
+    worksRef: worksRef,
+  };
   return (
     <div>
-      <section>
+      <section id="Homepage">
         <Navbar />
-        <Hero />
+        <Hero refs={refs} />
         <Section />
       </section>
-      <section>
-        <Parallax type="services" />
+      <section ref={worksRef} id="Portfolio">
+        <Parallax type="services" id="Projects" />
         <Section />
       </section>
       <Portfolio />
@@ -25,7 +35,7 @@ const App = () => {
       </section>
       <Works />
 
-      <section>
+      <section ref={contactRef} id="Contact">
         <Contact />
         <Section />
       </section>

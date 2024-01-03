@@ -6,20 +6,14 @@ const items = [
   {
     id: 1,
     title: "EMR De-identification Platform",
-    img: "./public/medical.jpeg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    img: "./medical.jpeg",
+    desc: "The EMR De-identification Platform, leveraging state-of-the-art deep learning algorithms, is actively enhancing its capabilities to achieve optimal metrics in securely anonymizing electronic medical records.",
   },
   {
     id: 2,
-    title: "AI Text Detection Platform",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
-  {
-    id: 3,
     title: "Django City Dashboard",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "The Django City Dashboard, actively evolving with Django, React, PostgreSQL, Redis, Docker, Kubernetes, and machine learning techniques, is a sophisticated platform offering real-time urban data visualization and insightful analytics for efficient city management.",
   },
 ];
 
@@ -42,7 +36,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2 style={{ color: "white" }}>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Latest</button>
+            <button className="onGoing">In progress</button>
           </motion.div>
         </div>
       </div>
