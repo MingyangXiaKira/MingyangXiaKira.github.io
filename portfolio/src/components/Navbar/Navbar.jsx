@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Sidebar from "../Sidebar/Sidebar";
 const Navbar = () => {
   return (
-    <div className="container">
+    <div className="Navbar">
       <Sidebar />
       <div className="navbar">
         <div className="wrapper">
@@ -17,10 +17,10 @@ const Navbar = () => {
           ></motion.span>
         </div>
         <div className="social">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/mingyang-xia-574306291/">
             <LinkedInIcon sx={{ fontSize: 30 }} />
           </a>
-          <a href="#">
+          <a href="https://github.com/MingyangXiaKira">
             <GitHubIcon sx={{ fontSize: 30 }} />
           </a>
         </div>
